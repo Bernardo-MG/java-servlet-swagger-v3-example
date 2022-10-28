@@ -1,0 +1,11 @@
+version: '3'
+services:
+    servlet:
+        build:
+            context: ../
+            dockerfile: ./docker/Dockerfile
+            args:
+                WAR_NAME: java-servlet-swagger-v3-example.war
+        ports:
+            - "8080:8080"
+            - "8000:8000"
