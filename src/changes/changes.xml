@@ -7,7 +7,7 @@
     <body>
         <release version="1.0.0" date="2022-10-28" description="First release">
             <action dev="bmg" type="update">
-                First release of the library.
+                First release.
             </action>
         </release>
     </body>
