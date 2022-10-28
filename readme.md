@@ -1,4 +1,4 @@
-# Java Servlet Example
+# Java Servlet with Swagger for OpenApi v3 Example
 
 Example setting up Swagger for OpenApi 3 in a Servlet. This is an extension of the [Java Servlet Example](https://github.com/Bernardo-MG/java-servlet-example).
 
