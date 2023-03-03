@@ -25,6 +25,7 @@
 package com.bernardomg.example.servlet;
 
 import java.io.IOException;
+import java.io.Writer;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -55,7 +56,7 @@ public final class OpenApiServlet extends HttpServlet {
 
     /**
      * Returns the OpenApi description. This is static, as it is an example.
-     * 
+     *
      * @return the OpenApi description
      */
     private final OpenAPI getOpenAPI() {
@@ -92,14 +93,15 @@ public final class OpenApiServlet extends HttpServlet {
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
             throws ServletException, IOException {
         final OpenAPI openAPI;
+        final Writer  writer;
 
         openAPI = getOpenAPI();
 
         response.setStatus(HttpServletResponse.SC_OK);
-        response.getWriter()
-            .write(Json.pretty(openAPI));
-        response.getWriter()
-            .flush();
+
+        writer = response.getWriter();
+        writer.write(Json.pretty(openAPI));
+        writer.flush();
     }
 
 }
