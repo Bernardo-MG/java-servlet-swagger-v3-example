@@ -1,6 +1,30 @@
 # Java Servlet with Swagger for OpenApi v3 Example
 
-Example setting up Swagger for OpenApi 3 in a Servlet. This is an extension of the [Java Servlet Example](https://github.com/Bernardo-MG/java-servlet-example).
+Example for setting up Swagger for OpenApi 3 in a Servlet. This is an extension of the [Java Servlet Example](https://github.com/Bernardo-MG/java-servlet-example).
+
+Just build the war and deploy into a servlet container, such as Tomcat.
+
+If deployed locally then the project will be accessible at the URL:
+
+```
+http://localhost:8080/java-servlet-swagger-v3-example/hello?name=me
+```
+
+The API docs will be available at:
+
+```
+http://localhost:8080/java-servlet-swagger-v3-example/api-docs/swagger.json
+```
+
+### Docker image
+
+To make things easier just make use of the Docker files:
+
+```
+docker-compose -f docker/docker-compose.yml --project-name java-servlet-swagger-v3-example up
+```
+
+This will build and deploy locally the project. The URLs are the same as in the previous example.
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
@@ -34,30 +58,6 @@ mvn verify site
 ```
 
 The verify phase is required, otherwise some of the reports won't be generated.
-
-## Usage
-
-Build the war and deploy it in a servlet container, such as Tomcat.
-
-If deployed locally then the project will be accessible at the URL:
-
-```
-http://localhost:8080/java-servlet-swagger-v3-example/hello?name=me
-```
-
-The API docs will be available at:
-
-```
-http://localhost:8080/java-servlet-swagger-v3-example/api-docs/swagger.json
-```
-
-### Docker image
-
-To ease deploying the project, Docker files are included:
-
-```
-docker-compose -f docker/docker-compose.yml --project-name java-servlet-swagger-v3-example up
-```
 
 ## Collaborate
 
